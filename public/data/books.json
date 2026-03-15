@@ -1,0 +1,68 @@
+[
+  {
+    "id": "1",
+    "title": "リーダブルコード",
+    "author": "Dustin Boswell",
+    "isbn": "9784873115658",
+    "readDate": "2024-08-15",
+    "rating": 5,
+    "tags": ["技術書", "プログラミング"],
+    "memo": "変数名の付け方が実務で即役立った。コードレビューで指摘する基準が明確になった。チーム全員に勧めたい一冊。",
+    "coverUrl": "https://books.google.com/books/content?id=Wx1dLwEACAAJ&printsec=frontcover&img=1&zoom=1"
+  },
+  {
+    "id": "2",
+    "title": "プログラマの数学 第2版",
+    "author": "結城 浩",
+    "isbn": "9784297117122",
+    "readDate": "2024-06-20",
+    "rating": 4,
+    "tags": ["技術書", "数学"],
+    "memo": "数学が苦手でもスラスラ読める。論理的思考の土台を作ってくれた本。特に帰納法の章が分かりやすかった。",
+    "coverUrl": "https://books.google.com/books/content?id=P6i5jwEACAAJ&printsec=frontcover&img=1&zoom=1"
+  },
+  {
+    "id": "3",
+    "title": "FACTFULNESS",
+    "author": "ハンス・ロスリング",
+    "isbn": "9784822289607",
+    "readDate": "2024-03-10",
+    "rating": 5,
+    "tags": ["教養", "データ"],
+    "memo": "思い込みで世界を見ていたことに気づかされた。データに基づいて考える習慣がついた。",
+    "coverUrl": "https://books.google.com/books/content?id=jYx2DwAAQBAJ&printsec=frontcover&img=1&zoom=1"
+  },
+  {
+    "id": "4",
+    "title": "コーヒーが冷めないうちに",
+    "author": "川口俊和",
+    "isbn": "9784763135711",
+    "readDate": "2024-01-05",
+    "rating": 4,
+    "tags": ["小説", "ファンタジー"],
+    "memo": "不思議な喫茶店で過去に戻れるという設定が面白い。それぞれの短編が心に残る。読後の温かさが好き。",
+    "coverUrl": "https://books.google.com/books/content?id=1FxKDwAAQBAJ&printsec=frontcover&img=1&zoom=1"
+  },
+  {
+    "id": "5",
+    "title": "チームトポロジー",
+    "author": "Matthew Skelton",
+    "isbn": "9784820729631",
+    "readDate": "2023-11-20",
+    "rating": 4,
+    "tags": ["技術書", "組織論"],
+    "memo": "チーム構造がアーキテクチャに影響するという話が目から鱗。自分のチームの課題が整理できた。",
+    "coverUrl": "https://books.google.com/books/content?id=2TdJzgEACAAJ&printsec=frontcover&img=1&zoom=1"
+  },
+  {
+    "id": "6",
+    "title": "嫌われる勇気",
+    "author": "岸見 一郎",
+    "isbn": "9784478025819",
+    "readDate": "2023-09-12",
+    "rating": 5,
+    "tags": ["教養", "心理学"],
+    "memo": "アドラー心理学の入門として最高。対話形式で読みやすく、承認欲求との向き合い方を学んだ。",
+    "coverUrl": "https://books.google.com/books/content?id=ZSyyAwAAQBAJ&printsec=frontcover&img=1&zoom=1"
+  }
+]
