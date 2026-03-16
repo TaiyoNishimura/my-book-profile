@@ -4,7 +4,7 @@ export default function Stats({ books }) {
 
   const avgRating =
     books.length > 0
-      ? (books.reduce((s, b) => s + b.rating, 0) / books.length).toFixed(1)
+      ? (books.reduce((sum, book) => sum + book.rating, 0) / books.length).toFixed(1)
       : "0.0";
 
   return (
