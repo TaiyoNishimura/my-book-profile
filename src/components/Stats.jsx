@@ -7,6 +7,12 @@ export default function Stats({ books }) {
       ? (books.reduce((sum, book) => sum + book.rating, 0) / books.length).toFixed(1)
       : "0.0";
 
+  const stats = [
+    { label: "Total", value: books.length },
+    { label: currentYear, value: numBooksReadThisYear },
+    { label: "Avg Rating", value: avgRating },
+  ];
+
   return (
     <div
       style={{
@@ -16,11 +22,7 @@ export default function Stats({ books }) {
         padding: "32px 24px",
       }}
     >
-      {[
-        { label: "Total", value: books.length },
-        { label: currentYear, value: numBooksReadThisYear },
-        { label: "Avg Rating", value: avgRating },
-      ].map((stat) => (
+      {stats.map((stat) => (
         <div key={stat.label} style={{ textAlign: "center" }}>
           <div
             style={{
