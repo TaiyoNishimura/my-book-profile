@@ -17,7 +17,7 @@ export default function App() {
     [books]
   );
 
-  const filtered = useMemo(
+  const booksFilteredByTag = useMemo(
     () =>
       selectedTag ? books.filter((b) => b.tags.includes(selectedTag)) : books,
     [books, selectedTag]
@@ -53,7 +53,7 @@ export default function App() {
       <Header />
       <Stats books={books} />
       <BookList
-        filtered={filtered}
+        filtered={booksFilteredByTag}
         allTags={allTags}
         selectedTag={selectedTag}
         setSelectedTag={setSelectedTag}
