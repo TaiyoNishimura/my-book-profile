@@ -1,7 +1,6 @@
 export default function Stats({ books }) {
-  const thisYear = books.filter((b) =>
-    b.readDate.startsWith(String(new Date().getFullYear()))
-  ).length;
+  const currentYear = String(new Date().getFullYear());
+  const numBooksReadThisYear = books.filter((b) => b.readDate.startsWith(currentYear)).length;
 
   const avgRating =
     books.length > 0
@@ -19,7 +18,7 @@ export default function Stats({ books }) {
     >
       {[
         { label: "Total", value: books.length },
-        { label: String(new Date().getFullYear()), value: thisYear },
+        { label: currentYear, value: numBooksReadThisYear },
         { label: "Avg Rating", value: avgRating },
       ].map((stat) => (
         <div key={stat.label} style={{ textAlign: "center" }}>
