@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import "./App.css";
 import Header from "./components/Header";
 import Stats from "./components/Stats";
@@ -7,9 +7,20 @@ import BookDetail from "./components/BookDetail";
 import { useBooks } from "./hooks/useBooks";
 
 export default function App() {
-  const { books, filtered, allTags, selectedTag, setSelectedTag, loading } =
-    useBooks();
+  const { books, loading } = useBooks();
+  const [selectedTag, setSelectedTag] = useState(null);
   const [selectedBook, setSelectedBook] = useState(null);
+
+  const allTags = useMemo(
+    () => [...new Set(books.flatMap((b) => b.tags))],
+    [books]
+  );
+
+  const filtered = useMemo(
+    () =>
+      selectedTag ? books.filter((b) => b.tags.includes(selectedTag)) : books,
+    [books, selectedTag]
+  );
 
   if (loading) {
     return (

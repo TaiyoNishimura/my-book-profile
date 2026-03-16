@@ -1,8 +1,7 @@
-import { useState, useEffect, useMemo } from "react";
+import { useState, useEffect } from "react";
 
 export function useBooks() {
   const [books, setBooks] = useState([]);
-  const [selectedTag, setSelectedTag] = useState(null);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -14,18 +13,5 @@ export function useBooks() {
       });
   }, []);
 
-  const allTags = useMemo(
-    () => [...new Set(books.flatMap((b) => b.tags))],
-    [books]
-  );
-
-  const filtered = useMemo(
-    () =>
-      selectedTag
-        ? books.filter((b) => b.tags.includes(selectedTag))
-        : books,
-    [books, selectedTag]
-  );
-
-  return { books, filtered, allTags, selectedTag, setSelectedTag, loading };
+  return { books, loading };
 }
