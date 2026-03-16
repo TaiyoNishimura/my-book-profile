@@ -1,7 +1,13 @@
 import { useState } from "react";
 import { Stars } from "./BookCard";
+import type { Book } from "../types/book";
 
-export default function BookDetail({ book, onClose }) {
+type BookDetailProps = {
+  book: Book | null;
+  onClose: () => void;
+};
+
+export default function BookDetail({ book, onClose }: BookDetailProps) {
   const [imgError, setImgError] = useState(false);
 
   if (!book) return null;
@@ -187,12 +193,14 @@ export default function BookDetail({ book, onClose }) {
             transition: "all 0.2s ease",
           }}
           onMouseOver={(e) => {
-            e.target.style.borderColor = "#c8a86e";
-            e.target.style.color = "#c8a86e";
+            const target = e.currentTarget;
+            target.style.borderColor = "#c8a86e";
+            target.style.color = "#c8a86e";
           }}
           onMouseOut={(e) => {
-            e.target.style.borderColor = "#3a3a4a";
-            e.target.style.color = "#8a8a9a";
+            const target = e.currentTarget;
+            target.style.borderColor = "#3a3a4a";
+            target.style.color = "#8a8a9a";
           }}
         >
           閉じる

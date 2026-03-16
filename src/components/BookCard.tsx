@@ -1,6 +1,11 @@
 import { useState } from "react";
+import type { Book } from "../types/book";
 
-const Stars = ({ rating }) => (
+type StarsProps = {
+  rating: number;
+};
+
+const Stars = ({ rating }: StarsProps) => (
   <span style={{ letterSpacing: "2px" }}>
     {[1, 2, 3, 4, 5].map((i) => (
       <span
@@ -18,7 +23,12 @@ const Stars = ({ rating }) => (
 
 export { Stars };
 
-export default function BookCard({ book, onClick }) {
+type BookCardProps = {
+  book: Book;
+  onClick: () => void;
+};
+
+export default function BookCard({ book, onClick }: BookCardProps) {
   const [hovered, setHovered] = useState(false);
   const [imgError, setImgError] = useState(false);
 

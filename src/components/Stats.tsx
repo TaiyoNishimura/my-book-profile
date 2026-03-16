@@ -1,4 +1,10 @@
-export default function Stats({ books }) {
+import type { Book } from "../types/book";
+
+type StatsProps = {
+  books: Book[];
+};
+
+export default function Stats({ books }: StatsProps) {
   const currentYear = String(new Date().getFullYear());
   const numBooksReadThisYear = books.filter((b) => b.readDate.startsWith(currentYear)).length;
 

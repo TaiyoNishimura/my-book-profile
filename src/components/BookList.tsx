@@ -1,6 +1,13 @@
 import BookCard from "./BookCard";
+import type { Book } from "../types/book";
 
-const Tag = ({ label, active, onClick }) => (
+type TagProps = {
+  label: string;
+  active: boolean;
+  onClick: () => void;
+};
+
+const Tag = ({ label, active, onClick }: TagProps) => (
   <button
     onClick={onClick}
     style={{
@@ -21,13 +28,21 @@ const Tag = ({ label, active, onClick }) => (
   </button>
 );
 
+type BookListProps = {
+  filtered: Book[];
+  allTags: string[];
+  selectedTag: string | null;
+  setSelectedTag: (tag: string | null) => void;
+  onSelectBook: (book: Book) => void;
+};
+
 export default function BookList({
   filtered,
   allTags,
   selectedTag,
   setSelectedTag,
   onSelectBook,
-}) {
+}: BookListProps) {
   return (
     <>
       {/* Tags */}
