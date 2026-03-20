@@ -1,25 +1,7 @@
 import { useState } from "react";
+import Stars from "../Stars";
 import type { Book } from "../../types/book";
 import "./BookCard.css";
-
-type StarsProps = {
-  rating: number;
-};
-
-const Stars = ({ rating }: StarsProps) => (
-  <span className="stars">
-    {[1, 2, 3, 4, 5].map((i) => (
-      <span
-        key={i}
-        className={`star ${i <= rating ? "star--active" : "star--inactive"}`}
-      >
-        ★
-      </span>
-    ))}
-  </span>
-);
-
-export { Stars };
 
 type BookCardProps = {
   book: Book;

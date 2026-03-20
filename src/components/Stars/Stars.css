@@ -1,0 +1,15 @@
+.stars {
+  letter-spacing: 2px;
+}
+
+.star {
+  font-size: 14px;
+}
+
+.star--active {
+  color: #e8a838;
+}
+
+.star--inactive {
+  color: var(--color-border);
+}

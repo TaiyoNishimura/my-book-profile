@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Stars } from "../BookCard";
+import Stars from "../Stars";
 import type { Book } from "../../types/book";
 import "./BookDetail.css";
 
