@@ -1,3 +1,12 @@
+:root {
+  --color-accent: #c8a86e;
+  --color-text-secondary: #8a8a9a;
+  --color-text-muted: #6a6a7a;
+  --color-text-faint: #5a5a6a;
+  --color-border: #3a3a4a;
+  --font-sans: 'Noto Sans JP', sans-serif;
+}
+
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
@@ -19,7 +28,7 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #3a3a4a;
+  background: var(--color-border);
   border-radius: 3px;
 }
 
@@ -27,7 +36,7 @@
   min-height: 100vh;
   background: linear-gradient(180deg, #181828, #12121e);
   color: #e0e0e8;
-  font-family: 'Noto Sans JP', sans-serif;
+  font-family: var(--font-sans);
 }
 
 .app-loading {
@@ -36,6 +45,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #6a6a7a;
-  font-family: 'Noto Sans JP', sans-serif;
+  color: var(--color-text-muted);
+  font-family: var(--font-sans);
 }

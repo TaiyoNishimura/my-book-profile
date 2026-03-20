@@ -11,7 +11,7 @@
 }
 
 .star--inactive {
-  color: #3a3a4a;
+  color: var(--color-border);
 }
 
 .book-card {
@@ -53,10 +53,10 @@
 
 .book-card-cover-fallback {
   font-size: 11px;
-  color: #6a6a7a;
+  color: var(--color-text-muted);
   text-align: center;
   padding: 8px;
-  font-family: 'Noto Sans JP', sans-serif;
+  font-family: var(--font-sans);
   line-height: 1.4;
 }
 
@@ -70,7 +70,7 @@
   font-size: 15px;
   font-weight: 600;
   color: #e8e8f0;
-  font-family: 'Noto Sans JP', sans-serif;
+  font-family: var(--font-sans);
   line-height: 1.4;
 }
 
@@ -78,7 +78,7 @@
   margin: 0 0 8px 0;
   font-size: 12px;
   color: #7a7a8a;
-  font-family: 'Noto Sans JP', sans-serif;
+  font-family: var(--font-sans);
 }
 
 .book-card-rating {
@@ -90,16 +90,16 @@
 
 .book-card-date {
   font-size: 11px;
-  color: #5a5a6a;
-  font-family: 'Noto Sans JP', sans-serif;
+  color: var(--color-text-faint);
+  font-family: var(--font-sans);
 }
 
 .book-card-memo {
   margin: 0;
   font-size: 12px;
-  color: #8a8a9a;
+  color: var(--color-text-secondary);
   line-height: 1.6;
-  font-family: 'Noto Sans JP', sans-serif;
+  font-family: var(--font-sans);
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;

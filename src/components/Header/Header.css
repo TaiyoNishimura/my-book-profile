@@ -6,7 +6,7 @@
 
 .header-label {
   font-size: 12px;
-  color: #c8a86e;
+  color: var(--color-accent);
   letter-spacing: 4px;
   text-transform: uppercase;
   margin-bottom: 12px;
@@ -24,7 +24,7 @@
 
 .header-description {
   font-size: 13px;
-  color: #6a6a7a;
+  color: var(--color-text-muted);
   max-width: 400px;
   margin: 0 auto;
   line-height: 1.7;

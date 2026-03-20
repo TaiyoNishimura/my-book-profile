@@ -12,13 +12,13 @@
 .stats-value {
   font-size: 28px;
   font-weight: 700;
-  color: #c8a86e;
+  color: var(--color-accent);
   font-family: 'Playfair Display', serif;
 }
 
 .stats-label {
   font-size: 11px;
-  color: #5a5a6a;
+  color: var(--color-text-faint);
   letter-spacing: 2px;
   text-transform: uppercase;
   margin-top: 4px;
