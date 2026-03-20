@@ -1,5 +1,5 @@
 import type { Book } from "../../types/book";
-import "./Stats.css";
+import styles from "./Stats.module.css";
 
 type StatsProps = {
   books: Book[];
@@ -21,11 +21,11 @@ export default function Stats({ books }: StatsProps) {
   ];
 
   return (
-    <div className="stats">
+    <div className={styles.stats}>
       {stats.map((stat) => (
-        <div key={stat.label} className="stats-item">
-          <div className="stats-value">{stat.value}</div>
-          <div className="stats-label">{stat.label}</div>
+        <div key={stat.label} className={styles.statsItem}>
+          <div className={styles.statsValue}>{stat.value}</div>
+          <div className={styles.statsLabel}>{stat.label}</div>
         </div>
       ))}
     </div>

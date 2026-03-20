@@ -1,5 +1,5 @@
 import { useState, useMemo } from "react";
-import "./App.css";
+import styles from "./App.module.css";
 import Header from "./components/Header";
 import Stats from "./components/Stats";
 import BookList from "./components/BookList";
@@ -24,11 +24,11 @@ export default function App() {
   );
 
   if (loading) {
-    return <div className="app-loading">読み込み中...</div>;
+    return <div className={styles.appLoading}>読み込み中...</div>;
   }
 
   return (
-    <div className="app">
+    <div className={styles.app}>
       <Header />
       <Stats books={books} />
       <BookList

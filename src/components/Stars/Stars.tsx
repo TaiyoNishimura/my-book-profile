@@ -1,4 +1,4 @@
-import "./Stars.css";
+import styles from "./Stars.module.css";
 
 type StarsProps = {
   rating: number;
@@ -6,11 +6,11 @@ type StarsProps = {
 
 export default function Stars({ rating }: StarsProps) {
   return (
-    <span className="stars">
+    <span className={styles.stars}>
       {[1, 2, 3, 4, 5].map((i) => (
         <span
           key={i}
-          className={`star ${i <= rating ? "star--active" : "star--inactive"}`}
+          className={`${styles.star} ${i <= rating ? styles.starActive : styles.starInactive}`}
         >
           ★
         </span>
