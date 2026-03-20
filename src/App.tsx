@@ -24,32 +24,11 @@ export default function App() {
   );
 
   if (loading) {
-    return (
-      <div
-        style={{
-          minHeight: "100vh",
-          background: "linear-gradient(180deg, #181828, #12121e)",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          color: "#6a6a7a",
-          fontFamily: "'Noto Sans JP', sans-serif",
-        }}
-      >
-        読み込み中...
-      </div>
-    );
+    return <div className="app-loading">読み込み中...</div>;
   }
 
   return (
-    <div
-      style={{
-        minHeight: "100vh",
-        background: "linear-gradient(180deg, #181828, #12121e)",
-        color: "#e0e0e8",
-        fontFamily: "'Noto Sans JP', sans-serif",
-      }}
-    >
+    <div className="app">
       <Header />
       <Stats books={books} />
       <BookList

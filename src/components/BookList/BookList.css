@@ -1,0 +1,43 @@
+.tag {
+  padding: 5px 14px;
+  border-radius: 20px;
+  border: 1.5px solid #3a3a4a;
+  background: transparent;
+  color: #8a8a9a;
+  cursor: pointer;
+  font-size: 12px;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 500;
+  transition: all 0.25s ease;
+  letter-spacing: 0.5px;
+}
+
+.tag--active {
+  border-color: #c8a86e;
+  background: rgba(200, 168, 110, 0.15);
+  color: #c8a86e;
+}
+
+.tag-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 0 24px 32px;
+}
+
+.book-grid {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 24px 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.book-grid-empty {
+  text-align: center;
+  color: #5a5a6a;
+  padding: 40px 0;
+  font-size: 14px;
+}
