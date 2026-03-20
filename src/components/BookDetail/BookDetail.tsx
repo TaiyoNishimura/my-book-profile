@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Stars from "../Stars";
 import type { Book } from "../../types/book";
-import "./BookDetail.css";
+import styles from "./BookDetail.module.css";
 
 type BookDetailProps = {
   book: Book | null;
@@ -14,10 +14,10 @@ export default function BookDetail({ book, onClose }: BookDetailProps) {
   if (!book) return null;
 
   return (
-    <div onClick={onClose} className="detail-overlay">
-      <div onClick={(e) => e.stopPropagation()} className="detail-modal">
-        <div className="detail-header">
-          <div className="detail-cover">
+    <div onClick={onClose} className={styles.detailOverlay}>
+      <div onClick={(e) => e.stopPropagation()} className={styles.detailModal}>
+        <div className={styles.detailHeader}>
+          <div className={styles.detailCover}>
             {!imgError ? (
               <img
                 src={book.coverUrl}
@@ -25,18 +25,18 @@ export default function BookDetail({ book, onClose }: BookDetailProps) {
                 onError={() => setImgError(true)}
               />
             ) : (
-              <div className="detail-cover-fallback">{book.title}</div>
+              <div className={styles.detailCoverFallback}>{book.title}</div>
             )}
           </div>
 
           <div>
-            <h2 className="detail-title">{book.title}</h2>
-            <p className="detail-author">{book.author}</p>
+            <h2 className={styles.detailTitle}>{book.title}</h2>
+            <p className={styles.detailAuthor}>{book.author}</p>
             <Stars rating={book.rating} />
-            <p className="detail-read-date">読了日: {book.readDate}</p>
-            <div className="detail-tags">
+            <p className={styles.detailReadDate}>読了日: {book.readDate}</p>
+            <div className={styles.detailTags}>
               {book.tags.map((tag) => (
-                <span key={tag} className="detail-tag">
+                <span key={tag} className={styles.detailTag}>
                   {tag}
                 </span>
               ))}
@@ -44,12 +44,12 @@ export default function BookDetail({ book, onClose }: BookDetailProps) {
           </div>
         </div>
 
-        <div className="detail-memo-section">
-          <h4 className="detail-memo-heading">感想・メモ</h4>
-          <p className="detail-memo-text">{book.memo}</p>
+        <div className={styles.detailMemoSection}>
+          <h4 className={styles.detailMemoHeading}>感想・メモ</h4>
+          <p className={styles.detailMemoText}>{book.memo}</p>
         </div>
 
-        <button onClick={onClose} className="detail-close-button">
+        <button onClick={onClose} className={styles.detailCloseButton}>
           閉じる
         </button>
       </div>

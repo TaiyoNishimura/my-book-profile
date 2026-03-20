@@ -5,18 +5,18 @@
   padding: 32px 24px;
 }
 
-.stats-item {
+.statsItem {
   text-align: center;
 }
 
-.stats-value {
+.statsValue {
   font-size: 28px;
   font-weight: 700;
   color: var(--color-accent);
   font-family: 'Playfair Display', serif;
 }
 
-.stats-label {
+.statsLabel {
   font-size: 11px;
   color: var(--color-text-faint);
   letter-spacing: 2px;

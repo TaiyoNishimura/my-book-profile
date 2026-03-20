@@ -1,6 +1,6 @@
 import BookCard from "../BookCard";
 import type { Book } from "../../types/book";
-import "./BookList.css";
+import styles from "./BookList.module.css";
 
 type TagProps = {
   label: string;
@@ -11,7 +11,7 @@ type TagProps = {
 const Tag = ({ label, active, onClick }: TagProps) => (
   <button
     onClick={onClick}
-    className={`tag ${active ? "tag--active" : ""}`}
+    className={`${styles.tag} ${active ? styles.tagActive : ""}`}
   >
     {label}
   </button>
@@ -35,7 +35,7 @@ export default function BookList({
   return (
     <>
       {/* Tags */}
-      <div className="tag-list">
+      <div className={styles.tagList}>
         <Tag
           label="すべて"
           active={selectedTag === null}
@@ -52,7 +52,7 @@ export default function BookList({
       </div>
 
       {/* Book Grid */}
-      <div className="book-grid">
+      <div className={styles.bookGrid}>
         {filtered.map((book, i) => (
           <div
             key={book.id}
@@ -62,7 +62,7 @@ export default function BookList({
           </div>
         ))}
         {filtered.length === 0 && (
-          <p className="book-grid-empty">該当する本がありません</p>
+          <p className={styles.bookGridEmpty}>該当する本がありません</p>
         )}
       </div>
     </>

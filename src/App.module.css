@@ -1,0 +1,16 @@
+.app {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #181828, #12121e);
+  color: #e0e0e8;
+  font-family: var(--font-sans);
+}
+
+.appLoading {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #181828, #12121e);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-muted);
+  font-family: var(--font-sans);
+}
